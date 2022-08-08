@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Jet Booking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,700;1,400&display=swap"
+    rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#00c7ff">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+
+  <header class="header" id="header">
+    <div class="container">
+
+      <div class="header__top">
+        <a class="header__logo" href="#footer">
+          <img src="images/icons/logo.svg" alt="logo" class="logo" width="140" height="37">
+          <img src="images/icons/logo-mobile.svg" alt="logo" class="logo--mobile" width="112" height="37">
+        </a>
+        <button class="header__btn" aria-label="Меню" type="button">
+          <span class="header__line"></span>
+        </button>
+        <nav class="header__nav">
+          <a class="header__logo" href="#footer">
+            <img class="header__mobile-logo" src="images/icons/logo-mobile.svg" alt="logo" width="112" height="37">
+          </a>
+            <button class="header__btn" aria-label="Меню" type="button">
+            <span class="header__line"></span>
+          </button>
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="#">
+                Home
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">
+                Booking
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#PrivateJet">
+                Private Jet
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#specification">
+                Specification
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#LuxuryCharters">
+                Luxury Charters
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#membership">
+                Membership
+              </a>
+            </li>
+          </ul>
+
+          <ul class="header__authorization">
+            <li class="header__authorization-item">
+              <a href="#" class="header__authorization-link">
+                Register
+              </a>
+            </li>
+            <li class="header__authorization-item">
+              <a href="#"
+                class="header__authorization-link header__authorization-link header__authorization-link--active">
+                Sign In
+              </a>
+            </li>
+          </ul>
+
+        </nav>
+      </div>
+
+      <div class="header__content">
+        <h1 class="header__title">
+          Enjoy <span class="header__title-span">
+            Reserved
+          </span>
+          Overhead bin space
+        </h1>
+
+        <a class="header__button" href="#">
+          Explore Now
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="blog">
+      <div class="container">
+
+        <div class="booking">
+
+          <div class="booking__wrapper">
+            <div class="booking__inner">
+
+              <form class="booking__form" action="#">
+                <ul class="booking__list">
+                  <li class="booking__item">
+                    <label class="booking__label">
+                      Round Trip
+                      <select class="booking__select" name="round-trip">
+                        <option class="booking__option" value="1">
+                          1
+                        </option>
+                        <option class="booking__option" value="2">
+                          2
+                        </option>
+                        <option class="booking__option" value="3">
+                          3
+                        </option>
+                      </select>
+                    </label>
+                  </li>
+                  <li class="booking__item">
+                    <label class="booking__label">
+                      Flight Type
+                      <select class="booking__select" name="round-trip">
+                        <option class="booking__option" value="1">
+                          1
+                        </option>
+                        <option class="booking__option" value="2">
+                          2
+                        </option>
+                        <option class="booking__option" value="3">
+                          3
+                        </option>
+                      </select>
+                    </label>
+                  </li>
+                  <li class="booking__item">
+                    <label class="booking__label">
+                      Person
+                      <select class="booking__select" name="round-trip">
+                        <option class="booking__option" value="1">
+                          1
+                        </option>
+                        <option class="booking__option" value="2">
+                          2
+                        </option>
+                        <option class="booking__option" value="3">
+                          3
+                        </option>
+                      </select>
+                    </label>
+                  </li>
+                </ul>
+              </form>
+
+              <div class="booking__box">
+                <div class="booking__column">
+                  <div class="booking__column-inner">
+                    <span class="booking__span">
+                      From
+                    </span>
+                    <h4 class="booking__heading">
+                      LAX
+                    </h4>
+                    <p class="booking__text">
+                      Los Angeles Intl Arpt,Los Angeles
+                    </p>
+                  </div>
+                </div>
+                <button class="booking__btn" type="button"></button>
+                <div class="booking__column">
+                  <div class="booking__column-inner">
+                    <span class="booking__span">
+                      To
+                    </span>
+                    <h4 class="booking__heading">
+                      MIA
+                    </h4>
+                    <p class="booking__text">
+                      Miami Intl, Miami
+                    </p>
+                  </div>
+                </div>
+                <div class="booking__column booking__column--final">
+                  <div class="booking__column-inner">
+                    <div class="booking__column-item">
+                      <span class="booking__span">
+                        Departure
+                      </span>
+                      <h4 class="booking__heading">
+                        Fri 15 Oct
+                      </h4>
+                      <div class="booking__btn-box">
+                        <button class="booking__btn-prev" type="button">Prev</button>
+                        <button class="booking__btn-next" type="button">Next</button>
+                      </div>
+                    </div>
+                    <div class="booking__column-item">
+                      <span class="booking__span">
+                        Return
+                      </span>
+                      <h4 class="booking__heading">
+                        Tue 19 Oct
+                      </h4>
+                      <div class="booking__btn-box">
+                        <button class="booking__btn-prev" type="button">Prev</button>
+                        <button class="booking__btn-next" type="button">Next</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="booking__btn-add" type="button">
+                Add Requirements
+              </button>
+
+              <div class="booking__button-box">
+                <button class="booking__button">
+                  Book Flights
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="title">
+          Private Jet for Business & Leisure Purposes
+        </h3>
+
+        <div class="blog__wrapper" id="specification">
+          <div class="blog__box">
+            <img class="blog__img" src="images/blog/1.jpg" alt="Private Jet Charter">
+            <div class="blog__text">
+              <h4 class="blog__heading">
+                Private Jet Charter
+              </h4>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its
+                layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                opposed to using
+                'Content here, content here', making it look like readable English. Many desktop publishing packages and
+                web page
+                editors
+              </p>
+            </div>
+          </div>
+          <div class="blog__box">
+            <div class="blog__text">
+              <h4 class="blog__heading">
+                Business Jet Charter
+              </h4>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+                desktop publishing packages and web page editors
+              </p>
+            </div>
+            <img class="blog__img" src="images/blog/2.jpg" alt="Business Jet Charter">
+          </div>
+        </div>
+
+        <div class="сharacteristic" id="PrivateJet">
+          <h3 class="title">
+            Private Jet Performance and Specifications
+          </h3>
+          <div class="сharacteristic__wrapper">
+            <ul class="сharacteristic__column">
+              <li class="сharacteristic__item">
+                <div class="сharacteristic__box">
+                  <h5 class="сharacteristic__heading сharacteristic__heading--seat">
+                    Luxury And Comfort
+                  </h5>
+                  <p class="сharacteristic__text">
+                    It is a long established fact that a reader will be distracted by the readable
+                  </p>
+                </div>
+              </li>
+              <li class="сharacteristic__item">
+                <div class="сharacteristic__box">
+                  <h5 class="сharacteristic__heading сharacteristic__heading--schedule">
+                    Personal schedule & booking
+                  </h5>
+                  <p class="сharacteristic__text">
+                    It is a long established fact that a reader will be distracted by the readable
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <ul class="сharacteristic__column">
+              <li class="сharacteristic__item">
+                <div class="сharacteristic__box">
+                  <h5 class="сharacteristic__heading сharacteristic__heading--web-browser">
+                    SAFETY AND SECURITY
+                  </h5>
+                  <p class="сharacteristic__text">
+                    It is a long established fact that a reader will be distracted by the readable
+                  </p>
+                </div>
+              </li>
+              <li class="сharacteristic__item">
+                <div class="сharacteristic__box">
+                  <h5 class="сharacteristic__heading сharacteristic__heading--captain">
+                    EXPERIENCED CREW
+                  </h5>
+                  <p class="сharacteristic__text">
+                    It is a long established fact that a reader will be distracted by the readable
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="air-complex" id="LuxuryCharters">
+      <div class="container">
+
+        <h3 class="title">
+          Luxury Charters
+        </h3>
+
+        <ul class="air-complex__list">
+          <li class="air-complex__item">
+            <a class="air-complex__link" href="#">
+              <div class="air-complex__box">
+                <img src="images/air-complex/1.jpg" alt="airplane" class="air-complex__img" width="230" height="190">
+                <h6 class="air-complex__heading">
+                  Piaggio P.180 Avanti
+                </h6>
+              </div>
+            </a>
+          </li>
+          <li class="air-complex__item">
+            <a class="air-complex__link" href="#">
+              <div class="air-complex__box">
+                <img src="images/air-complex/2.jpg" alt="airplane" class="air-complex__img" width="230" height="190">
+                <h6 class="air-complex__heading">
+                  Pilatus PC-12
+                </h6>
+              </div>
+            </a>
+          </li>
+          <li class="air-complex__item">
+            <a class="air-complex__link" href="#">
+              <div class="air-complex__box">
+                <img src="images/air-complex/3.jpg" alt="airplane" class="air-complex__img" width="230" height="190">
+                <h6 class="air-complex__heading">
+                  Piper pa27 aztec
+                </h6>
+              </div>
+            </a>
+          </li>
+          <li class="air-complex__item">
+            <a class="air-complex__link" href="#">
+              <div class="air-complex__box">
+                <img src="images/air-complex/4.jpg" alt="airplane" class="air-complex__img" width="230" height="190">
+                <h6 class="air-complex__heading">
+                  Beech BE100 King Air
+                </h6>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="subscription" id="membership">
+      <div class="container">
+
+        <h3 class="title subscription__title">
+          Enjoy our membership
+        </h3>
+
+        <ul class="subscription__list">
+          <li class="subscription__item">
+            <article class="pricing-card">
+              <div class="pricing-card__inner">
+                <h4 class="pricing-card__heading">
+                  Popular
+                </h4>
+                <p class="pricing-card__subtitle">
+                  What You’ll Get
+                </p>
+                <ul class="pricing-card__list">
+                  <li class="pricing-card__item">
+                    One-time initiation fee $0
+                  </li>
+                  <li class="pricing-card__item">
+                    Deposit $50k
+                  </li>
+                  <li class="pricing-card__item">
+                    Pricing / rates Dynamic
+                  </li>
+                  <li class="pricing-card__item">
+                    Priority fleet access Yes
+                  </li>
+                  <li class="pricing-card__item">
+                    Guaranteed fleet access No
+                  </li>
+                </ul>
+                <div class="pricing-card__price">
+                  $250
+                  <span class="pricing-card__price-span">
+                    /month
+                  </span>
+                </div>
+                <button class="pricing-card__btn" type="button">
+                  Choose
+                </button>
+              </div>
+            </article>
+          </li>
+          <li class="subscription__item">
+            <article class="pricing-card">
+              <div class="pricing-card__inner">
+                <h4 class="pricing-card__heading">
+                  Business
+                </h4>
+                <p class="pricing-card__subtitle">
+                  What You’ll Get
+                </p>
+                <ul class="pricing-card__list">
+                  <li class="pricing-card__item">
+                    One-time initiation fee $0
+                  </li>
+                  <li class="pricing-card__item">
+                    Deposit $50k
+                  </li>
+                  <li class="pricing-card__item">
+                    Pricing / rates Dynamic
+                  </li>
+                  <li class="pricing-card__item">
+                    Priority fleet access Yes
+                  </li>
+                  <li class="pricing-card__item">
+                    Guaranteed fleet access No
+                  </li>
+                </ul>
+                <div class="pricing-card__price">
+                  $450
+                  <span class="pricing-card__price-span">
+                    /month
+                  </span>
+                </div>
+                <button class="pricing-card__btn" type="button">
+                  Choose
+                </button>
+              </div>
+            </article>
+          </li>
+          <li class="subscription__item">
+            <article class="pricing-card">
+              <div class="pricing-card__inner">
+                <h4 class="pricing-card__heading">
+                  Elite
+                </h4>
+                <p class="pricing-card__subtitle">
+                  What You’ll Get
+                </p>
+                <ul class="pricing-card__list">
+                  <li class="pricing-card__item">
+                    One-time initiation fee $0
+                  </li>
+                  <li class="pricing-card__item">
+                    Deposit $50k
+                  </li>
+                  <li class="pricing-card__item">
+                    Pricing / rates Dynamic
+                  </li>
+                  <li class="pricing-card__item">
+                    Priority fleet access Yes
+                  </li>
+                  <li class="pricing-card__item">
+                    Guaranteed fleet access No
+                  </li>
+                </ul>
+                <div class="pricing-card__price">
+                  $680
+                  <span class="pricing-card__price-span">
+                    /month
+                  </span>
+                </div>
+                <button class="pricing-card__btn" type="button">
+                  Choose
+                </button>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+
+      <a class="footer__logo" href="#header">
+        <img class="footer__img" src="images/icons/logo-footer.svg" alt="logo" width="140" height="37">
+      </a>
+
+      <nav class="footer__nav">
+        <ul class="footer__list">
+
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              SERVICES
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              ABOUT US
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              NEWS
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              CONTACT
+            </a>
+          </li>
+        </ul>
+        <a class="footer__copyright" href="#">
+          © 2021 Air. All rights reserved.
+        </a>
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
