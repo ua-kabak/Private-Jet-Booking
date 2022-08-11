@@ -18,13 +18,59 @@
     <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#00c7ff">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
 <body class="body">
 
   <header class="header" id="header">
+    <div class="popup popup--register">
+      <button class="popup__btn popup__btn--register">
+        <img class="popup__btn-img" src="images/icons/x.svg" alt="Close">
+      </button>
+      <form class="popup__form" action="#">
+        <h5 class="popup__title">
+          Register account
+        </h5>
+        <label class="popup__label" for="#">
+          <input type="login" class="popup__input" placeholder="Login" required>
+        </label>
+        <label class="popup__label" for="#">
+          <input type="password" class="popup__input" placeholder="Password" required>
+        </label>
+        <label class="popup__label" for="#">
+          <input type="password" class="popup__input" placeholder="Repeat password" required>
+        </label>
+
+        <button class="popup__button" type="submit">
+          Register
+        </button>
+      </form>
+    </div>
+    <div class="popup popup--authorization">
+      <button class="popup__btn popup__btn--authorization">
+        <img class="popup__btn-img" src="images/icons/x.svg" alt="Close">
+      </button>
+      <form class="popup__form" action="#">
+        <h5 class="popup__title">
+          Account login
+        </h5>
+        <label class="popup__label" for="#">
+          <input type="login" class="popup__input" placeholder="Login" required>
+        </label>
+        <label class="popup__label" for="#">
+          <input type="password" class="popup__input" placeholder="Password" required>
+        </label>
+
+        <button class="popup__button" type="submit">
+          Log in
+        </button>
+      </form>
+    </div>
     <div class="container">
 
       <div class="header__top">
@@ -77,13 +123,13 @@
 
           <ul class="header__authorization">
             <li class="header__authorization-item">
-              <a href="#" class="header__authorization-link">
+              <a href="#" class="header__authorization-link register">
                 Register
               </a>
             </li>
             <li class="header__authorization-item">
               <a href="#"
-                class="header__authorization-link header__authorization-link header__authorization-link--active">
+                class="header__authorization-link authorization">
                 Sign In
               </a>
             </li>
@@ -124,14 +170,11 @@
                     <label class="booking__label">
                       Round Trip
                       <select class="booking__select" name="round-trip">
-                        <option class="booking__option" value="1">
-                          1
+                        <option value="1" width="30">
+                          Yes
                         </option>
-                        <option class="booking__option" value="2">
-                          2
-                        </option>
-                        <option class="booking__option" value="3">
-                          3
+                        <option value="2">
+                          No
                         </option>
                       </select>
                     </label>
@@ -164,6 +207,9 @@
                         </option>
                         <option class="booking__option" value="3">
                           3
+                        </option>
+                        <option class="booking__option" value="3">
+                          more
                         </option>
                       </select>
                     </label>
@@ -249,8 +295,8 @@
 
         <div class="blog__wrapper" id="specification">
           <div class="blog__box">
-            <img class="blog__img" src="images/blog/1.jpg" alt="Private Jet Charter">
-            <div class="blog__text">
+            <img class="blog__img wow animate__fadeInLeft" src="images/blog/1.jpg" alt="Private Jet Charter">
+            <div class="blog__text wow animate__fadeInRight">
               <h4 class="blog__heading">
                 Private Jet Charter
               </h4>
@@ -266,7 +312,7 @@
             </div>
           </div>
           <div class="blog__box">
-            <div class="blog__text">
+            <div class="blog__text wow animate__fadeInLeft">
               <h4 class="blog__heading">
                 Business Jet Charter
               </h4>
@@ -277,7 +323,7 @@
                 desktop publishing packages and web page editors
               </p>
             </div>
-            <img class="blog__img" src="images/blog/2.jpg" alt="Business Jet Charter">
+            <img class="blog__img  wow animate__fadeInRight" src="images/blog/2.jpg" alt="Business Jet Charter">
           </div>
         </div>
 
@@ -287,7 +333,7 @@
           </h3>
           <div class="сharacteristic__wrapper">
             <ul class="сharacteristic__column">
-              <li class="сharacteristic__item">
+              <li class="сharacteristic__item wow animate__fadeInLeft">
                 <div class="сharacteristic__box">
                   <h5 class="сharacteristic__heading сharacteristic__heading--seat">
                     Luxury And Comfort
@@ -297,7 +343,7 @@
                   </p>
                 </div>
               </li>
-              <li class="сharacteristic__item">
+              <li class="сharacteristic__item wow animate__fadeInLeft">
                 <div class="сharacteristic__box">
                   <h5 class="сharacteristic__heading сharacteristic__heading--schedule">
                     Personal schedule & booking
@@ -309,7 +355,7 @@
               </li>
             </ul>
             <ul class="сharacteristic__column">
-              <li class="сharacteristic__item">
+              <li class="сharacteristic__item wow animate__fadeInRight">
                 <div class="сharacteristic__box">
                   <h5 class="сharacteristic__heading сharacteristic__heading--web-browser">
                     SAFETY AND SECURITY
@@ -319,7 +365,7 @@
                   </p>
                 </div>
               </li>
-              <li class="сharacteristic__item">
+              <li class="сharacteristic__item wow animate__fadeInRight">
                 <div class="сharacteristic__box">
                   <h5 class="сharacteristic__heading сharacteristic__heading--captain">
                     EXPERIENCED CREW
@@ -344,7 +390,7 @@
         </h3>
 
         <ul class="air-complex__list">
-          <li class="air-complex__item">
+          <li class="air-complex__item wow animate__zoomIn">
             <a class="air-complex__link" href="#">
               <div class="air-complex__box">
                 <img src="images/air-complex/1.jpg" alt="airplane" class="air-complex__img" width="230" height="190">
@@ -354,7 +400,7 @@
               </div>
             </a>
           </li>
-          <li class="air-complex__item">
+          <li class="air-complex__item wow animate__zoomIn">
             <a class="air-complex__link" href="#">
               <div class="air-complex__box">
                 <img src="images/air-complex/2.jpg" alt="airplane" class="air-complex__img" width="230" height="190">
@@ -364,7 +410,7 @@
               </div>
             </a>
           </li>
-          <li class="air-complex__item">
+          <li class="air-complex__item wow animate__zoomIn">
             <a class="air-complex__link" href="#">
               <div class="air-complex__box">
                 <img src="images/air-complex/3.jpg" alt="airplane" class="air-complex__img" width="230" height="190">
@@ -374,7 +420,7 @@
               </div>
             </a>
           </li>
-          <li class="air-complex__item">
+          <li class="air-complex__item wow animate__zoomIn">
             <a class="air-complex__link" href="#">
               <div class="air-complex__box">
                 <img src="images/air-complex/4.jpg" alt="airplane" class="air-complex__img" width="230" height="190">
@@ -397,7 +443,7 @@
         </h3>
 
         <ul class="subscription__list">
-          <li class="subscription__item">
+          <li class="subscription__item wow animate__fadeInLeft">
             <article class="pricing-card">
               <div class="pricing-card__inner">
                 <h4 class="pricing-card__heading">
@@ -435,7 +481,7 @@
               </div>
             </article>
           </li>
-          <li class="subscription__item">
+          <li class="subscription__item wow animate__fadeInDown">
             <article class="pricing-card">
               <div class="pricing-card__inner">
                 <h4 class="pricing-card__heading">
@@ -473,7 +519,7 @@
               </div>
             </article>
           </li>
-          <li class="subscription__item">
+          <li class="subscription__item wow animate__fadeInRight">
             <article class="pricing-card">
               <div class="pricing-card__inner">
                 <h4 class="pricing-card__heading">
@@ -557,8 +603,10 @@
     </div>
   </footer>
 
+  <script src="js/wow.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/jquery.formstyler.min.js"></script>
 </body>
 
 </html>

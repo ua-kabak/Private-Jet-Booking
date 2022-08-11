@@ -136,6 +136,28 @@ html {
   &__authorization-link {
     opacity: 100%;
 
+    /* &--active {
+      padding: 5px 22px;
+      color: #FFF;
+      background-color: #656293;
+      border-radius: 5px;
+    } */
+  }
+
+  .register {
+    transition: all 0.4s;
+
+    &--active {
+      padding: 5px 22px;
+      color: #FFF;
+      background-color: #656293;
+      border-radius: 5px;
+    }
+  }
+
+  .authorization {
+    transition: all 0.4s;
+
     &--active {
       padding: 5px 22px;
       color: #FFF;
@@ -250,7 +272,7 @@ html {
   &__img {
     display: block;
     border-radius: 20px;
-    padding: 66px 0;
+    margin: 66px 0;
 
     &:nth-child(1) {
       margin-right: 38px;
@@ -567,6 +589,7 @@ html {
 
   &__link {
     transition: all 0.4s;
+
     &:hover {
       color: #fff;
     }
@@ -596,6 +619,7 @@ html {
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -607,6 +631,10 @@ html {
   &__label {
     font-weight: 600;
     color: #151515;
+    border: 1px solid #AAAAAA;
+    padding: 5px;
+    padding-right: 0;
+    border-radius: 4px;
   }
 
   &__box {
@@ -765,6 +793,107 @@ html {
   }
 }
 
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+
+  &__btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+
+  &__title {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  &__form {
+    text-align: center;
+    width: 550px;
+    height: 400px;
+    padding: 40px 80px;
+    background-color: #656293;
+    border: 2px solid #000;
+    border-radius: 20px;
+  }
+
+  &__label {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Poppins',
+      sans-serif;
+    font-weight: 400;
+    color: #000;
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #656293;
+    padding: 6px;
+    background-color: #fff;
+    border-radius: 12px;
+    transition: all 0.5s;
+
+    &:hover {
+      color: #656293;
+      background-color: #ccc;
+    }
+
+    &:active {
+      color: #000;
+    }
+  }
+
+  &--register {
+    transition: all 0.5s;
+    transform: translateY(-200%);
+
+    &.active {
+      transform: translateY(0);
+    }
+  }
+
+  &--authorization {
+    transition: all 0.5s;
+    transform: translateY(-200%);
+
+    &.active {
+      transform: translateY(0);
+    }
+
+    .popup__form {
+      height: 350px;
+    }
+  }
+}
+
 @media screen and (max-width: 1500px) {
   .blog {
     &__box {
@@ -779,7 +908,7 @@ html {
     }
 
     &__img {
-      padding: 0;
+      margin: 0;
     }
   }
 }
@@ -896,7 +1025,7 @@ html {
         left: 0;
         text-align: center;
         justify-content: center;
-        height: 100%;
+        height: 108%;
       }
 
       .header__btn {
@@ -1155,6 +1284,12 @@ html {
       margin-bottom: 50px;
     }
   }
+
+  .popup {
+    &__form {
+      width: auto;
+    }
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1190,6 +1325,12 @@ html {
 
     &__btn-add {
       margin-bottom: 20px;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -1273,6 +1414,23 @@ html {
       }
     }
   }
+
+  .popup {
+    &__title {
+      font-size: 28px;
+    }
+
+    &__form {
+      padding: 30px 50px;
+      height: auto;
+    }
+
+    &--authorization {
+      .popup__form {
+        height: auto;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -1286,16 +1444,6 @@ html {
   .booking {
     top: 0;
     box-shadow: none;
-
-    &__list {
-      flex-wrap: wrap;
-    }
-
-    &__item {
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
-    }
   }
 
   .сharacteristic {
@@ -1303,4 +1451,62 @@ html {
       padding: 20px 30px 30px;
     }
   }
+
+  .popup {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__form {
+      padding: 20px 40px;
+    }
+
+    &__button {
+      font-size: 18px;
+    }
+  }
+}
+
+.jq-selectbox__select {
+  padding: 0 30px 0 10px;
+  border: none;
+  border-bottom-color: none;
+  border-radius: 4px;
+  background: none;
+  box-shadow: none;
+  font-family: 'Poppins',
+    sans-serif;
+  font-weight: 600;
+  color: #000;
+  font-size: 14px;
+  text-shadow: 1px 1px #fff;
+}
+
+.jq-selectbox__select-text {
+  width: 100%;
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox li.selected {
+  background-color: #fff;
+  color: #000;
+}
+
+.jq-selectbox__trigger-arrow {
+  border-top: 6px solid #000;
+}
+
+.jq-selectbox__select-text {
+  width: 100% !important;
+}
+
+.jq-selectbox.focused .jq-selectbox__select {
+  border: none;
+}
+
+.jq-selectbox__select:hover {
+  background-color: transparent;
 }

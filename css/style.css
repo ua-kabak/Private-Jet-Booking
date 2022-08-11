@@ -116,8 +116,26 @@ html {
 }
 .header__authorization-link {
   opacity: 100%;
+  /* &--active {
+    padding: 5px 22px;
+    color: #FFF;
+    background-color: #656293;
+    border-radius: 5px;
+  } */
 }
-.header__authorization-link--active {
+.header .register {
+  transition: all 0.4s;
+}
+.header .register--active {
+  padding: 5px 22px;
+  color: #FFF;
+  background-color: #656293;
+  border-radius: 5px;
+}
+.header .authorization {
+  transition: all 0.4s;
+}
+.header .authorization--active {
   padding: 5px 22px;
   color: #FFF;
   background-color: #656293;
@@ -211,7 +229,7 @@ html {
 .blog__img {
   display: block;
   border-radius: 20px;
-  padding: 66px 0;
+  margin: 66px 0;
 }
 .blog__img:nth-child(1) {
   margin-right: 38px;
@@ -486,6 +504,7 @@ html {
 }
 .booking__list {
   display: flex;
+  flex-wrap: wrap;
 }
 .booking__item:not(:last-child) {
   margin-right: 10px;
@@ -493,6 +512,10 @@ html {
 .booking__label {
   font-weight: 600;
   color: #151515;
+  border: 1px solid #AAAAAA;
+  padding: 5px;
+  padding-right: 0;
+  border-radius: 4px;
 }
 .booking__box {
   display: flex;
@@ -621,6 +644,92 @@ html {
   color: #c4c4c4;
 }
 
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.popup__btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.popup__title {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.popup__form {
+  text-align: center;
+  width: 550px;
+  height: 400px;
+  padding: 40px 80px;
+  background-color: #656293;
+  border: 2px solid #000;
+  border-radius: 20px;
+}
+.popup__label {
+  display: block;
+}
+.popup__label:not(:last-child) {
+  margin-bottom: 20px;
+}
+.popup__input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+.popup__button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.8;
+  color: #656293;
+  padding: 6px;
+  background-color: #fff;
+  border-radius: 12px;
+  transition: all 0.5s;
+}
+.popup__button:hover {
+  color: #656293;
+  background-color: #ccc;
+}
+.popup__button:active {
+  color: #000;
+}
+.popup--register {
+  transition: all 0.5s;
+  transform: translateY(-200%);
+}
+.popup--register.active {
+  transform: translateY(0);
+}
+.popup--authorization {
+  transition: all 0.5s;
+  transform: translateY(-200%);
+}
+.popup--authorization.active {
+  transform: translateY(0);
+}
+.popup--authorization .popup__form {
+  height: 350px;
+}
+
 @media screen and (max-width: 1500px) {
   .blog__box:not(:last-child) {
     margin-bottom: 70px;
@@ -629,7 +738,7 @@ html {
     display: none;
   }
   .blog__img {
-    padding: 0;
+    margin: 0;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -719,7 +828,7 @@ html {
     left: 0;
     text-align: center;
     justify-content: center;
-    height: 100%;
+    height: 108%;
   }
   .header__nav .header__btn {
     position: absolute;
@@ -903,6 +1012,9 @@ html {
   .pricing-card__list {
     margin-bottom: 50px;
   }
+  .popup__form {
+    width: auto;
+  }
 }
 @media screen and (max-width: 576px) {
   .title {
@@ -927,6 +1039,9 @@ html {
   }
   .booking__btn-add {
     margin-bottom: 20px;
+  }
+  .booking__item:not(:last-child) {
+    margin-bottom: 15px;
   }
   .blog {
     padding-bottom: 30px;
@@ -979,6 +1094,16 @@ html {
   .footer__item:not(:last-child) {
     margin-right: 0;
   }
+  .popup__title {
+    font-size: 28px;
+  }
+  .popup__form {
+    padding: 30px 50px;
+    height: auto;
+  }
+  .popup--authorization .popup__form {
+    height: auto;
+  }
 }
 @media screen and (max-width: 375px) {
   .header__title {
@@ -989,13 +1114,58 @@ html {
     top: 0;
     box-shadow: none;
   }
-  .booking__list {
-    flex-wrap: wrap;
-  }
-  .booking__item:not(:last-child) {
-    margin-bottom: 15px;
-  }
   .сharacteristic__box {
     padding: 20px 30px 30px;
   }
+  .popup__title {
+    font-size: 24px;
+  }
+  .popup__form {
+    padding: 20px 40px;
+  }
+  .popup__button {
+    font-size: 18px;
+  }
+}
+.jq-selectbox__select {
+  padding: 0 30px 0 10px;
+  border: none;
+  border-bottom-color: none;
+  border-radius: 4px;
+  background: none;
+  box-shadow: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #000;
+  font-size: 14px;
+  text-shadow: 1px 1px #fff;
+}
+
+.jq-selectbox__select-text {
+  width: 100%;
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox li.selected {
+  background-color: #fff;
+  color: #000;
+}
+
+.jq-selectbox__trigger-arrow {
+  border-top: 6px solid #000;
+}
+
+.jq-selectbox__select-text {
+  width: 100% !important;
+}
+
+.jq-selectbox.focused .jq-selectbox__select {
+  border: none;
+}
+
+.jq-selectbox__select:hover {
+  background-color: transparent;
 }/*# sourceMappingURL=style.css.map */
