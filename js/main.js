@@ -16,6 +16,14 @@ $(function () {
     $('.header__authorization').toggleClass('header__authorization--active');
   });
 
+  $('.header__link--mobile, .header__authorization-link--mobile').on('click', function () {
+    $('.header__btn').toggleClass('header__btn--active');
+    $('.header__nav').toggleClass('header__nav--active');
+    $('.header__list').toggleClass('header__list--active');
+    $('.body').toggleClass('body--active');
+    $('.header__authorization').toggleClass('header__authorization--active');
+  });
+
   $('.register').on('click', function () {
     $('.register').toggleClass('register--active');
     $('.popup--register').toggleClass('active');

@@ -22,6 +22,20 @@ html {
   padding: 0 10px;
 }
 
+@mixin line-clamp($font-size,
+  $line-height,
+  $lines-to-show) {
+  display: block;
+  display: -webkit-box;
+  font-size: rem($font-size);
+  max-height: rem(($font-size * $line-height * $lines-to-show));
+  line-height: $line-height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines-to-show;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -39,6 +53,7 @@ html {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 65px;
+  @include line-clamp(36, 1.5, 3);
 }
 
 .header {
@@ -121,6 +136,10 @@ html {
         background-color: #fff;
       }
     }
+
+    &--mobile {
+      display: none;
+    }
   }
 
   &__authorization {
@@ -136,25 +155,13 @@ html {
   &__authorization-link {
     opacity: 100%;
 
-    /* &--active {
-      padding: 5px 22px;
-      color: #FFF;
-      background-color: #656293;
-      border-radius: 5px;
-    } */
-  }
-
-  .register {
-    transition: all 0.4s;
-
-    &--active {
-      padding: 5px 22px;
-      color: #FFF;
-      background-color: #656293;
-      border-radius: 5px;
+    &--mobile {
+      display: none;
     }
+
   }
 
+  .register,
   .authorization {
     transition: all 0.4s;
 
@@ -172,6 +179,7 @@ html {
     font-size: 66px;
     line-height: 1.2;
     margin-bottom: 48px;
+    @include line-clamp(66, 1.2, 3);
   }
 
   &__title-span {
@@ -296,6 +304,7 @@ html {
     font-weight: 600;
     margin-bottom: 14px;
     color: #000;
+    @include line-clamp(24, 1.5, 3);
   }
 }
 
@@ -399,7 +408,7 @@ html {
   }
 
   &__item {
-    height: 250px;
+    height: auto;
     background-color: #fff;
     box-shadow: 0 30px 84px rgba(19, 10, 46, 0.08),
       0 8px 32px rgba(19, 10, 46, 0.07),
@@ -415,10 +424,13 @@ html {
   }
 
   &__heading {
+    width: 230px;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    padding-bottom: 14px;
+    padding: 0 5px 5px 5px;
+    margin-bottom: 10px;
+    @include line-clamp(16, 1.5, 2);
   }
 }
 
@@ -488,12 +500,14 @@ html {
     font-size: 32px;
     line-height: 1.2;
     margin-bottom: 32px;
+    @include line-clamp(32, 1.2, 2);
   }
 
   &__subtitle {
     font-size: 22px;
     color: #A9A9AA;
     margin-bottom: 24px;
+    @include line-clamp(22, 1.5, 2);
   }
 
   &__list {
@@ -507,6 +521,7 @@ html {
     font-weight: 500;
     padding-left: 32px;
     position: relative;
+    @include line-clamp(16, 1.5, 2);
 
     &::before {
       content: '';
@@ -1016,16 +1031,16 @@ html {
       z-index: 200;
       padding: 20px 0;
       flex-direction: column;
+      width: 100%;
+      background-color: #fff;
+      left: 0;
+      text-align: center;
+      justify-content: center;
+      height: 108%;
 
       &--active {
         position: fixed;
         transform: translateY(-9%);
-        width: 100%;
-        background-color: #fff;
-        left: 0;
-        text-align: center;
-        justify-content: center;
-        height: 108%;
       }
 
       .header__btn {
@@ -1064,6 +1079,22 @@ html {
       font-size: 18px;
       color: #000;
       background-color: #fff;
+    }
+
+    &__authorization-link {
+      display: none;
+
+      &--mobile {
+        display: block;
+      }
+    }
+
+    &__link {
+      display: none;
+
+      &--mobile {
+        display: block;
+      }
     }
 
     &__authorization {
@@ -1139,6 +1170,13 @@ html {
       left: 0;
       top: 10px;
       transition: transform 0.3s ease 0s;
+    }
+
+    .register,
+    .authorization {
+      &--active {
+        padding: 10px 22px;
+      }
     }
   }
 
@@ -1257,7 +1295,8 @@ html {
     }
 
     &__img {
-      max-height: 300px;
+      width: 520px;
+      max-height: 350px;
     }
   }
 
@@ -1345,6 +1384,10 @@ html {
       &:not(:last-child) {
         margin-bottom: 40px;
       }
+    }
+
+    &__img {
+      max-height: 320px;
     }
   }
 
@@ -1449,6 +1492,12 @@ html {
   .сharacteristic {
     &__box {
       padding: 20px 30px 30px;
+    }
+  }
+
+  .blog {
+    &__img {
+      max-height: 290px;
     }
   }
 

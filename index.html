@@ -11,19 +11,19 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,700;1,400&display=swap"
     rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="images/favicons/site.webmanifest">
-    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#00c7ff">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/jquery.formstyler.css">
-    <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="images/favicons/site.webmanifest">
+  <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#00c7ff">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/jquery.formstyler.css">
+  <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body class="body">
 
@@ -36,14 +36,14 @@
         <h5 class="popup__title">
           Register account
         </h5>
-        <label class="popup__label" for="#">
-          <input type="login" class="popup__input" placeholder="Login" required>
+        <label class="popup__label">
+          <input class="popup__input" type="text" placeholder="Login" required>
         </label>
-        <label class="popup__label" for="#">
+        <label class="popup__label">
           <input type="password" class="popup__input" placeholder="Password" required>
         </label>
-        <label class="popup__label" for="#">
-          <input type="password" class="popup__input" placeholder="Repeat password" required>
+        <label class="popup__label">
+          <input class="popup__input" type="password" placeholder="Repeat password" required>
         </label>
 
         <button class="popup__button" type="submit">
@@ -59,11 +59,11 @@
         <h5 class="popup__title">
           Account login
         </h5>
-        <label class="popup__label" for="#">
-          <input type="login" class="popup__input" placeholder="Login" required>
+        <label class="popup__label">
+          <input class="popup__input" type="text" placeholder="Login" required>
         </label>
-        <label class="popup__label" for="#">
-          <input type="password" class="popup__input" placeholder="Password" required>
+        <label class="popup__label">
+          <input class="popup__input" type="password" placeholder="Password" required>
         </label>
 
         <button class="popup__button" type="submit">
@@ -74,7 +74,7 @@
     <div class="container">
 
       <div class="header__top">
-        <a class="header__logo" href="#footer">
+        <a class="header__logo wow animate__fadeInRightBig" href="#footer">
           <img src="images/icons/logo.svg" alt="logo" class="logo" width="140" height="37">
           <img src="images/icons/logo-mobile.svg" alt="logo" class="logo--mobile" width="112" height="37">
         </a>
@@ -85,7 +85,7 @@
           <a class="header__logo" href="#footer">
             <img class="header__mobile-logo" src="images/icons/logo-mobile.svg" alt="logo" width="112" height="37">
           </a>
-            <button class="header__btn" aria-label="Меню" type="button">
+          <button class="header__btn" aria-label="Меню" type="button">
             <span class="header__line"></span>
           </button>
           <ul class="header__list">
@@ -93,9 +93,15 @@
               <a class="header__link" href="#">
                 Home
               </a>
+              <a class="header__link header__link--mobile" href="#">
+                Home
+              </a>
             </li>
             <li class="header__item">
               <a class="header__link" href="#">
+                Booking
+              </a>
+              <a class="header__link header__link--mobile" href="#">
                 Booking
               </a>
             </li>
@@ -103,9 +109,15 @@
               <a class="header__link" href="#PrivateJet">
                 Private Jet
               </a>
+              <a class="header__link header__link--mobile" href="#PrivateJet">
+                Private Jet
+              </a>
             </li>
             <li class="header__item">
               <a class="header__link" href="#specification">
+                Specification
+              </a>
+              <a class="header__link header__link--mobile" href="#specification">
                 Specification
               </a>
             </li>
@@ -113,9 +125,15 @@
               <a class="header__link" href="#LuxuryCharters">
                 Luxury Charters
               </a>
+              <a class="header__link header__link--mobile" href="#LuxuryCharters">
+                Luxury Charters
+              </a>
             </li>
             <li class="header__item">
               <a class="header__link" href="#membership">
+                Membership
+              </a>
+              <a class="header__link header__link--mobile" href="#membership">
                 Membership
               </a>
             </li>
@@ -126,10 +144,15 @@
               <a href="#" class="header__authorization-link register">
                 Register
               </a>
+              <a href="#" class="header__authorization-link header__authorization-link--mobile register">
+                Register
+              </a>
             </li>
             <li class="header__authorization-item">
-              <a href="#"
-                class="header__authorization-link authorization">
+              <a href="#" class="header__authorization-link authorization">
+                Sign In
+              </a>
+              <a href="#" class="header__authorization-link header__authorization-link--mobile  authorization">
                 Sign In
               </a>
             </li>
@@ -170,7 +193,7 @@
                     <label class="booking__label">
                       Round Trip
                       <select class="booking__select" name="round-trip">
-                        <option value="1" width="30">
+                        <option value="1">
                           Yes
                         </option>
                         <option value="2">
@@ -289,14 +312,15 @@
 
         </div>
 
-        <h3 class="title">
+        <h3 class="title wow animate__bounceIn">
           Private Jet for Business & Leisure Purposes
         </h3>
 
         <div class="blog__wrapper" id="specification">
           <div class="blog__box">
-            <img class="blog__img wow animate__fadeInLeft" src="images/blog/1.jpg" alt="Private Jet Charter">
-            <div class="blog__text wow animate__fadeInRight">
+            <img class="blog__img wow animate__zoomIn" src="images/blog/1.jpg" alt="Private Jet Charter" width="590"
+              height="392">
+            <div class="blog__text wow animate__zoomIn">
               <h4 class="blog__heading">
                 Private Jet Charter
               </h4>
@@ -312,7 +336,7 @@
             </div>
           </div>
           <div class="blog__box">
-            <div class="blog__text wow animate__fadeInLeft">
+            <div class="blog__text wow animate__zoomIn">
               <h4 class="blog__heading">
                 Business Jet Charter
               </h4>
@@ -323,17 +347,17 @@
                 desktop publishing packages and web page editors
               </p>
             </div>
-            <img class="blog__img  wow animate__fadeInRight" src="images/blog/2.jpg" alt="Business Jet Charter">
+            <img class="blog__img  wow animate__zoomIn" src="images/blog/2.jpg" alt="Business Jet Charter" width="590" height="392">
           </div>
         </div>
 
         <div class="сharacteristic" id="PrivateJet">
-          <h3 class="title">
+          <h3 class="title wow animate__bounceIn">
             Private Jet Performance and Specifications
           </h3>
           <div class="сharacteristic__wrapper">
             <ul class="сharacteristic__column">
-              <li class="сharacteristic__item wow animate__fadeInLeft">
+              <li class="сharacteristic__item wow animate__zoomIn">
                 <div class="сharacteristic__box">
                   <h5 class="сharacteristic__heading сharacteristic__heading--seat">
                     Luxury And Comfort
@@ -343,7 +367,7 @@
                   </p>
                 </div>
               </li>
-              <li class="сharacteristic__item wow animate__fadeInLeft">
+              <li class="сharacteristic__item wow animate__zoomIn">
                 <div class="сharacteristic__box">
                   <h5 class="сharacteristic__heading сharacteristic__heading--schedule">
                     Personal schedule & booking
@@ -355,7 +379,7 @@
               </li>
             </ul>
             <ul class="сharacteristic__column">
-              <li class="сharacteristic__item wow animate__fadeInRight">
+              <li class="сharacteristic__item wow animate__zoomIn">
                 <div class="сharacteristic__box">
                   <h5 class="сharacteristic__heading сharacteristic__heading--web-browser">
                     SAFETY AND SECURITY
@@ -365,7 +389,7 @@
                   </p>
                 </div>
               </li>
-              <li class="сharacteristic__item wow animate__fadeInRight">
+              <li class="сharacteristic__item wow animate__zoomIn">
                 <div class="сharacteristic__box">
                   <h5 class="сharacteristic__heading сharacteristic__heading--captain">
                     EXPERIENCED CREW
@@ -385,7 +409,7 @@
     <section class="air-complex" id="LuxuryCharters">
       <div class="container">
 
-        <h3 class="title">
+        <h3 class="title wow animate__bounceIn">
           Luxury Charters
         </h3>
 
@@ -438,12 +462,12 @@
     <section class="subscription" id="membership">
       <div class="container">
 
-        <h3 class="title subscription__title">
+        <h3 class="title subscription__title wow animate__bounceIn">
           Enjoy our membership
         </h3>
 
         <ul class="subscription__list">
-          <li class="subscription__item wow animate__fadeInLeft">
+          <li class="subscription__item wow animate__zoomIn">
             <article class="pricing-card">
               <div class="pricing-card__inner">
                 <h4 class="pricing-card__heading">
@@ -481,7 +505,7 @@
               </div>
             </article>
           </li>
-          <li class="subscription__item wow animate__fadeInDown">
+          <li class="subscription__item wow animate__zoomIn">
             <article class="pricing-card">
               <div class="pricing-card__inner">
                 <h4 class="pricing-card__heading">
@@ -519,7 +543,7 @@
               </div>
             </article>
           </li>
-          <li class="subscription__item wow animate__fadeInRight">
+          <li class="subscription__item wow animate__zoomIn">
             <article class="pricing-card">
               <div class="pricing-card__inner">
                 <h4 class="pricing-card__heading">
@@ -567,7 +591,7 @@
   <footer class="footer" id="footer">
     <div class="container">
 
-      <a class="footer__logo" href="#header">
+      <a class="footer__logo wow animate__pulse" href="#header">
         <img class="footer__img" src="images/icons/logo-footer.svg" alt="logo" width="140" height="37">
       </a>
 
