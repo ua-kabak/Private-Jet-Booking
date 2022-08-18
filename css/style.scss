@@ -88,11 +88,7 @@ html {
   }
 
   &__logo {
-    margin-right: auto&__logo {
-      margin-right: 140px;
-    }
-
-    ;
+    margin-right: auto;
   }
 
   &__mobile-logo {
@@ -937,11 +933,6 @@ html {
 }
 
 @media screen and (max-width: 1200px) {
-  .logo {
-    margin-right: 50px;
-    z-index: 1000;
-  }
-
   .header {
     &::after {
       right: 70px;
@@ -1347,16 +1338,7 @@ html {
       padding: 5px 0;
     }
   }
-
-  .logo {
-    display: none;
-
-    &--mobile {
-      display: block;
-      z-index: 1000;
-    }
-  }
-
+  
   .booking {
     &__inner {
       padding: 20px;
