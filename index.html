@@ -74,10 +74,14 @@
     <div class="container">
 
       <div class="header__top">
+
         <a class="header__logo wow animate__fadeInRightBig" href="#footer">
-          <img src="images/icons/logo.svg" alt="logo" class="logo" width="140" height="37">
-          <img src="images/icons/logo-mobile.svg" alt="logo" class="logo--mobile" width="112" height="37">
+          <picture>
+            <source srcset="images/icons/logo-mobile.svg" media="(max-width: 576px)">
+            <img class="logo__img" src="images/icons/logo.svg">
+          </picture>
         </a>
+
         <button class="header__btn" aria-label="Меню" type="button">
           <span class="header__line"></span>
         </button>
@@ -347,7 +351,8 @@
                 desktop publishing packages and web page editors
               </p>
             </div>
-            <img class="blog__img  wow animate__zoomIn" src="images/blog/2.jpg" alt="Business Jet Charter" width="590" height="392">
+            <img class="blog__img  wow animate__zoomIn" src="images/blog/2.jpg" alt="Business Jet Charter" width="590"
+              height="392">
           </div>
         </div>
 

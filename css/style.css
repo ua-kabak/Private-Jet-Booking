@@ -79,6 +79,10 @@ html {
   right: 162px;
   top: 175px;
 }
+.header__logo {
+  margin-right: auto .header__logo __logo;
+  margin-right-margin-right: 140px;
+}
 .header__mobile-logo {
   display: none;
 }
@@ -192,13 +196,6 @@ html {
   color: #ececec;
 }
 .header__btn {
-  display: none;
-}
-
-.logo {
-  margin-right: 140px;
-}
-.logo--mobile {
   display: none;
 }
 

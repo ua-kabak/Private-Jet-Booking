@@ -8,7 +8,7 @@ $(function () {
     $('.subscription__item'), $(this).toggleClass('subscription__item--active');
   });
 
-  $('.header__btn').on('click', function () {
+  $('.header__btn, .header__mobile-logo').on('click', function () {
     $('.header__btn').toggleClass('header__btn--active');
     $('.header__nav').toggleClass('header__nav--active');
     $('.header__list').toggleClass('header__list--active');

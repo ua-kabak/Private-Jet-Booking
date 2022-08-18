@@ -87,6 +87,14 @@ html {
     top: 175px;
   }
 
+  &__logo {
+    margin-right: auto&__logo {
+      margin-right: 140px;
+    }
+
+    ;
+  }
+
   &__mobile-logo {
     display: none;
   }
@@ -221,14 +229,6 @@ html {
   }
 
   &__btn {
-    display: none;
-  }
-}
-
-.logo {
-  margin-right: 140px;
-
-  &--mobile {
     display: none;
   }
 }
